@@ -1,0 +1,2 @@
+date,dt,temp,feels_like,pressure,humidity,dew_point,uvi,clouds,visibility,wind_speed,wind_deg,wind_gust,main,description
+10/05/2021,1633546800,71.58,71.69,1022,69,60.89,2.65,75,10000,1.01,165,5.01,Clouds,broken clouds

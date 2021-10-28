@@ -23,9 +23,9 @@ while True:
 tt = input('Today? (T or F) \n' ).lower()
 
 if tt == 't':
-    x = datetime.datetime.now().strftime('%y%m%d')
+    x = datetime.datetime.now().strftime('%m/%d/%Y')
 else:
-    x = input('Enter date (YYMMDD): \n')
+    x = input('Enter date (MM/DD/YYYY): \n')
     
  
 x_vec = [x] * len(nums)

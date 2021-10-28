@@ -4,7 +4,7 @@ import pandas as pd
 import sqlite3
 
 
-DB = 'test5'
+DB = 'test7.db'
 
 
 
@@ -33,6 +33,7 @@ def upload(df):
     
     # the high level upload
     date = df.iloc[0]['date']
+    date_name = df.iloc[0]['date'].replace('/','')
     mean = df.groupby(['date']).mean().iloc[0]['tips']
     total = df.groupby(['date']).sum().iloc[0]['tips']
     n = df.groupby(['date']).count().iloc[0]['tips']
@@ -47,12 +48,14 @@ def upload(df):
     df2.to_sql('rollup',con = conn, if_exists='append', index=False)
 
     # archive data
-    archive1 = 'archive/' + date + '_daily_' '.csv'
-    archive2 = 'archive/' + date + '_rollup_' '.csv'
+    archive1 = 'archive/' + date_name + '_daily_' '.csv'
+    archive2 = 'archive/' + date_name + '_rollup_' '.csv'
     df.to_csv(archive1,index=False)
     df2.to_csv(archive2,index=False)
     
     print(df2)
 
     return print('successful upload')
+
+
     

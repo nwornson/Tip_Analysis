@@ -1,0 +1,2 @@
+date,dt,temp,feels_like,pressure,humidity,dew_point,uvi,clouds,visibility,wind_speed,wind_deg,wind_gust,main,description
+10/02/2021,1633287600,69.01,68.52,1014,62,55.45,2.92,90,10000,4,342,8.99,Clouds,overcast clouds
